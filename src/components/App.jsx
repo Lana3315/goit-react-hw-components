@@ -4,6 +4,8 @@ import user from '../components/Profile/user.json'
 import { StaticsSection } from './Statistics/StaticsSection'
 import { FriendList } from './FriendList/FriendList'
 import friend from './FriendList/friend.json'
+import { TransactionBody } from './TransactionHistory/TransactionBody.jsx'
+import transactions from './TransactionHistory/transactions.json'
 
 
 
@@ -29,6 +31,12 @@ export const App = () => {
         name={friend.name}
         isOnline={friend.isOnline}
         avatar={friend.avatar}
+      />
+      <TransactionBody 
+        id={transactions.id} 
+        type ={transactions.type}
+        amount={transactions.amount}
+        currency={transactions.currency}
       />
   </React.StrictMode>
   )

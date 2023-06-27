@@ -14,7 +14,9 @@
   gap: 40px;
   width: 400px;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid;
+  margin: 10px auto;
+  box-shadow: 2px 5px;
 }
 .status {
   width: 20px;
@@ -25,7 +27,8 @@
   margin: 0 40px;
 }
 .avatar {
-  border: 3px solid black;
+  border: 1px solid black;
+  box-shadow: 1px 2px;
 }
 .name {
   font-weight: bold;
