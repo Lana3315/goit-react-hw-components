@@ -1,44 +1,36 @@
 import React from 'react';
-import { Profile } from '../components/Profile/Profile'
 import user from '../components/Profile/user.json'
-import { StaticsSection } from './Statistics/StaticsSection'
-import { FriendList } from './FriendList/FriendList'
-import friend from './FriendList/friend.json'
-import { TransactionBody } from './TransactionHistory/TransactionBody.jsx'
+import {Profile}  from './Profile/Profile'
+import  StaticsSection  from './Statistics/StaticsSection'
+import data from './Statistics/data.json'
+import  FriendList  from './FriendList/FriendList'
+import firends from '../components/FriendList/friends.json'
+import  TransactionHistory  from '../components/TransactionHistory/TransactionHistory.jsx'
 import transactions from './TransactionHistory/transactions.json'
 
 
 
-export const App = () => {
+export const App = () =>{
   return (
-    <React.StrictMode >
-      <div> <Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-        stats={user.stats}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
-      /></div>
-      <section>
-        <StaticsSection
-         />
-        </section>
+    <React.StrictMode>
+    <div>
+      <Profile
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats}
+    />
+      <StaticsSection title="UPLOAD STATS" stats={data}
+      />
       <FriendList
-        id={friend.id}
-        name={friend.name}
-        isOnline={friend.isOnline}
-        avatar={friend.avatar}
+        friends = {firends}
       />
-      <TransactionBody 
-        id={transactions.id} 
-        type ={transactions.type}
-        amount={transactions.amount}
-        currency={transactions.currency}
+      <TransactionHistory items={transactions}
       />
-  </React.StrictMode>
-  )
+      </div>
+     </React.StrictMode>
+  );
 };
+
 export default App

@@ -1,4 +1,4 @@
-.container {
+.statistics {
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   margin-bottom: 20px;
   color: gray;
 }
-.list {
+.statlist {
   width: 400px;
   height: 100px;
   list-style: none;
